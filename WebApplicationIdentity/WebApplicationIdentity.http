@@ -1,0 +1,22 @@
+@WebApplicationIdentity_HostAddress = http://localhost:5145
+
+GET {{WebApplicationIdentity_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+POST {{WebApplicationIdentity_HostAddress}}/register
+Content-Type: application/json
+{
+  "email": "testeuser@test.com",
+  "password": "Senha1$"
+}
+
+###
+
+POST {{WebApplicationIdentity_HostAddress}}/login
+Content-Type: application/json
+{
+  "email": "testeuser@test.com",
+  "password": "Senha1"
+}
